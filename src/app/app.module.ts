@@ -1,22 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './user/user.component';
-import { CustomerComponent } from './customer/customer.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { CreateCompanyComponent } from './create-company/create-company.component';
+import { EditCompanyComponent } from './edit-company/edit-company.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UserComponent,
-    CustomerComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, routingComponents, CreateUserComponent, EditUserComponent, CreateCompanyComponent, EditCompanyComponent],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
