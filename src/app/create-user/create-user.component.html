@@ -1,61 +1,94 @@
 <div style="margin-left: 500px">
   <h2 style="margin-left: 180px">CREATE USER</h2>
-  <form #userForm="ngForm">
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
     <table border="1" style="padding: 75px; border-radius: 10px">
-      <label>
-        Name:
-        <br />
-        <br />
-        <input
-          type="text"
-          placeholder="Enter name"
-          style="
-            inline-size: 400px;
-            height: 25px;
-            border-color: rgb(132, 223, 226);
-          "
-        />
-      </label>
+      <label> Name: </label>
       <br />
       <br />
-      <label>
-        Email:
-        <br />
-        <br />
+      <input
+        type="text"
+        required
+        class="form-control"
+        #name="ngModel"
+        placeholder="Enter name"
+        name="username"
+        ngModel
+        style="
+          inline-size: 400px;
+          height: 25px;
+          border-color: rgb(132, 223, 226);
+        "
+      />
+      <br />
+      <span *ngIf="name.invalid && name.touched" class="error"
+        >Name field is required</span
+      >
+      <br />
+      <br />
+      <label> Email: </label>
+      <br />
+      <br />
+      <input
+        type="email"
+        required
+        email
+        class="form-control"
+        #email="ngModel"
+        placeholder="Enter Email"
+        name="useremail"
+        ngModel
+        style="
+          inline-size: 400px;
+          height: 25px;
+          border-color: rgb(132, 223, 226);
+        "
+      />
+      <br />
+      <span *ngIf="email.invalid && email.touched" class="error"
+        >Email field is not valid</span
+      >
 
-        <input
-          type="text"
-          placeholder="Enter Email"
-          style="
-            inline-size: 400px;
-            height: 25px;
-            border-color: rgb(132, 223, 226);
-          "
-        />
-      </label>
       <br />
       <br />
-      <label>
-        Gender:
+      <div class="form-group">
+        <label>
+          Gender:
+          <br />
+          <br />
+          <select
+            required
+            ngModel
+            name="gender"
+            class="form-control"
+            #gender="ngModel"
+            style="
+              inline-size: 400px;
+              height: 25px;
+              border-color: rgb(132, 223, 226);
+            "
+          >
+            <option disabled value="0">select</option>
+            <option>male</option>
+            <option>female</option>
+          </select>
+        </label>
         <br />
-        <br />
-        <select
-          style="
-            inline-size: 400px;
-            height: 25px;
-            border-color: rgb(132, 223, 226);
-          "
+        <span *ngIf="gender.invalid && gender.touched" class="error"
+          >gender is required</span
         >
-          <option>select gender</option>
-          <option>male</option>
-          <option>female</option>
-        </select>
-      </label>
+      </div>
+
       <br />
       <br />
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       <div style="text-align: center">
-        <button type="submit">Done</button>
+        <button
+          type="submit"
+          [disabled]="userForm.invalid"
+          class="btn btn-primary"
+        >
+          Done
+        </button>
       </div>
     </table>
   </form>
