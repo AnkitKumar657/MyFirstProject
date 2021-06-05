@@ -1,1 +1,62 @@
-<p>create-user works!</p>
+<div style="margin-left: 500px">
+  <h2 style="margin-left: 180px">CREATE USER</h2>
+  <form #userForm="ngForm">
+    <table border="1" style="padding: 75px; border-radius: 10px">
+      <label>
+        Name:
+        <br />
+        <br />
+        <input
+          type="text"
+          placeholder="Enter name"
+          style="
+            inline-size: 400px;
+            height: 25px;
+            border-color: rgb(132, 223, 226);
+          "
+        />
+      </label>
+      <br />
+      <br />
+      <label>
+        Email:
+        <br />
+        <br />
+
+        <input
+          type="text"
+          placeholder="Enter Email"
+          style="
+            inline-size: 400px;
+            height: 25px;
+            border-color: rgb(132, 223, 226);
+          "
+        />
+      </label>
+      <br />
+      <br />
+      <label>
+        Gender:
+        <br />
+        <br />
+        <select
+          style="
+            inline-size: 400px;
+            height: 25px;
+            border-color: rgb(132, 223, 226);
+          "
+        >
+          <option>select gender</option>
+          <option>male</option>
+          <option>female</option>
+        </select>
+      </label>
+      <br />
+      <br />
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <div style="text-align: center">
+        <button type="submit">Done</button>
+      </div>
+    </table>
+  </form>
+</div>

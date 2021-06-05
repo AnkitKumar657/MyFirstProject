@@ -7,10 +7,18 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { CreateCompanyComponent } from './create-company/create-company.component';
 import { EditCompanyComponent } from './edit-company/edit-company.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, routingComponents, CreateUserComponent, EditUserComponent, CreateCompanyComponent, EditCompanyComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    routingComponents,
+    CreateUserComponent,
+    EditUserComponent,
+    CreateCompanyComponent,
+    EditCompanyComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -9,7 +9,7 @@ nav a {
   background-color: rgb(66, 107, 161);
   border-radius: 4px;
 }
-/* nav a:visited,
+ /* nav a:visited,
 a:link {
   color: whitesmoke;
 }
@@ -19,7 +19,7 @@ nav a:hover {
 }
 nav a.active {
   color: #039be5;
-} */
+}  */
 
 * {
   font-family: Arial, Helvetica, sans-serif;
