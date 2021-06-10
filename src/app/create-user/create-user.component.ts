@@ -1,3 +1,4 @@
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,6 +12,7 @@ export class CreateUserComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(data: any) {
-    console.warn(data);
+    const jsonData = JSON.stringify(data);
+    localStorage.setItem("id", jsonData);
   }
 }
